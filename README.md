@@ -121,19 +121,6 @@ python main.py -go test -data CIFAR10 -model CNN -nb 100 -lbs 10 \
 
 ---
 
-## Monitoring and Logging
-
-During training, the system tracks and prints the memory and communication usage for each communication round in real-time:
-
-* `train_base_m`: Baseline FedAvg communication overhead (MB)
-* `train_base_glsm`: Communication overhead with original (uncompressed) head gradients (MB)
-* `train_base_chgc`: Actual communication overhead with compressed (HGC) head gradients (MB)
-* **Compression Ratio**: When `-ugc` is enabled, the terminal prints the current round's and the global average communication compression ratio.
-
-The final experimental results, including Accuracy, AUC, and Loss, are automatically saved in `.h5` format in the `results/` directory.
-
----
-
 ## References
 
 [1] Zhang, J., Liu, Y., Hua, Y., Wang, H., Song, T., Xue, Z., Ma, R., & Cao, J. (2025). PFLlib: A Beginner-Friendly and Comprehensive Personalized Federated Learning Library and Benchmark. *Journal of Machine Learning Research*, 26(50), 1-10.
