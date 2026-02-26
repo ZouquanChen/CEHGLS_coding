@@ -60,7 +60,7 @@ def run(args):
                 args.model = FedAvgCNN(
                     in_features=1, num_classes=args.num_classes, dim=1024
                 ).to(args.device)
-            elif "Cifar" in args.dataset:
+            elif "cifar" in args.dataset.lower():
                 args.model = FedAvgCNN(
                     in_features=3, num_classes=args.num_classes, dim=1600
                 ).to(args.device)
