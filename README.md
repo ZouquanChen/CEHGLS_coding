@@ -86,8 +86,7 @@ cd system
 Run without any enhancement components to establish a performance baseline:
 
 ```bash
-python main.py -go test -data CIFAR10 -m CNN -nb 10 -lbs 10 \
-    -gr 200 -algo FedAvg -nc 20 -did 0
+python main.py -go test -data CIFAR10 -m CNN -nb 10 -gr 100 -ls 2 -lbs 10 -lr 0.01 -nc 20 -jr 1.0 -eg 1 -dev cuda -did 0
 
 ```
 
@@ -96,8 +95,7 @@ python main.py -go test -data CIFAR10 -m CNN -nb 10 -lbs 10 \
 Add the `-uhg` flag to enable HGLS. The server will broadcast the head gradients of all clients, and each client will perform linear search optimization locally:
 
 ```bash
-python main.py -go test -data CIFAR10 -m CNN -nb 10 -lbs 10 \
-    -gr 200 -algo FedAvg -nc 20 -did 0 -uhg
+python main.py -go test -data CIFAR10 -m CNN -nb 10 -gr 100 -ls 2 -lbs 10 -lr 0.01 -nc 20 -jr 1.0 -eg 1 -dev cuda -did 0 -uhg
 
 ```
 
@@ -106,8 +104,7 @@ python main.py -go test -data CIFAR10 -m CNN -nb 10 -lbs 10 \
 Add both `-uhg` and `-ugc` flags to perform head gradient interactions with extremely low communication overhead. The quantization bit-width can be specified via `-bw` (default is 16):
 
 ```bash
-python main.py -go test -data CIFAR10 -m CNN -nb 10 -lbs 10 \
-    -gr 200 -algo FedAvg -nc 20 -did 0 -uhg -ugc -bw 16
+python main.py -go test -data CIFAR10 -m CNN -nb 10 -gr 100 -ls 2 -lbs 10 -lr 0.01 -nc 20 -jr 1.0 -eg 1 -dev cuda -did 0 -uhg -ugc -bw 16
 
 ```
 
