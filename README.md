@@ -52,6 +52,13 @@ CEHGLS/
 │       ├── encode.py           # LFSR encoder for gradient compression
 │       ├── mem_utils.py        # Memory and communication resource monitoring
 │       └── result_utils.py     # Results processing and saving
+├── dataset/                    # Dataset directory
+│   └── <DatasetName>/          # Dataset (e.g., Cifar10)
+│       ├── config.json         # Dataset configuration
+│       ├── data_log            # Data partitioning log
+│       ├── rawdata/            # Raw dataset files
+│       ├── train/              # Training data splits
+│       └── test/               # Test data splits
 └── results/                    # Output directory for experimental results (.h5 files)
 ```
 
