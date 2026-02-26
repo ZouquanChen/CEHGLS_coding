@@ -1,0 +1,4 @@
+dataset/Cifar10/**/*.npz filter=lfs diff=lfs merge=lfs -text
+dataset/Cifar10/**/*.gz filter=lfs diff=lfs merge=lfs -text
+dataset/Cifar10/**/data_batch_* filter=lfs diff=lfs merge=lfs -text
+dataset/Cifar10/**/test_batch filter=lfs diff=lfs merge=lfs -text
