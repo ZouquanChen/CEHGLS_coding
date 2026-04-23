@@ -9,6 +9,8 @@ CEHGLS consists of two components:
 1. `HGLS` (Head Gradient Linear Search)
 2. `HGC` (Head Gradient Compression)
 
+The method implementation can be found in `system/flcore/clientbase.py`
+
 ---
 
 ## References
